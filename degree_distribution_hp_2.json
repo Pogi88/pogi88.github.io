@@ -1,0 +1,46 @@
+[
+    {
+        "degree": 17,
+        "count": 1
+    },
+    {
+        "degree": 16,
+        "count": 1
+    },
+    {
+        "degree": 12,
+        "count": 1
+    },
+    {
+        "degree": 10,
+        "count": 1
+    },
+    {
+        "degree": 9,
+        "count": 1
+    },
+    {
+        "degree": 6,
+        "count": 2
+    },
+    {
+        "degree": 5,
+        "count": 3
+    },
+    {
+        "degree": 4,
+        "count": 6
+    },
+    {
+        "degree": 3,
+        "count": 6
+    },
+    {
+        "degree": 2,
+        "count": 11
+    },
+    {
+        "degree": 1,
+        "count": 1
+    }
+]
