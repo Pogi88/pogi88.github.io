@@ -1,1 +1,99 @@
-Something something
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry Potter Real Data Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+    <header>
+        <h1>Harry Potter Real Data Analysis</h1>
+    </header>
+    <main>
+
+        <section id="introduction">
+            <h1>Harry Potter Social Network Data Analysis</h1>
+        </section>
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>This analysis explores the relationships between characters in the Harry Potter universe using network analysis.</p>
+            <p>The Harry Potter real dataset has 254 nodes and 606 links. As we can see, the network is undirected but it is weighted.</p>
+            <p>The nodes here are all the characters that appear throughout the whole Harry Potter book series (all 7 books), and links are the relationships between them. The links are based on whether two characters appear in a window of five sentences in the text (the text version of the respective book). The weight values are established based on how many times a certain pair appears in the before-mentioned context.</p>
+        </section>
+
+        <section id="network-properties">
+            <h2>Network Properties</h2>
+            <div id="diameter">
+                <h3>Diameter</h3>
+                <p>The diameter of the network is 9, which means the longest shortest path between any two characters is 9 links.</p>
+                <p>In the context of this network representing characters of the Harry Potter Universe connected by character relationships, the diameter of 9 would mean that the longest shortest path between any two characters in terms of the number of relationships you have to traverse is 9, meaning that the longest chain of character relationships connecting any two character in the network would have 9 links.</p>
+            </div>
+            <div id="average-degree">
+                <h3>Average Degree</h3>
+                <p>The average degree of the network is around 5.12, indicating that each character has on average 5 connections. An average degree of 5.12 could contribute to the small-world property, particularly if coupled with a moderate clustering coefficient and a relatively short average path length.</p>
+            </div>
+            <div id="average-shortest-path">
+                <h3>Average Shortest Path</h3>
+                <p>In many real-world social networks, the average shortest path tends to be relatively short, typically ranging from 3 to 7. An average shortest path of 3.53 in our Harry Potter social network could indicate that characters are relatively closely connected, suggesting a high level of interaction and communication within the network.</p>
+            </div>
+            <div id="average-clustering-coefficient">
+                <h3>Average Clustering Coefficient</h3>
+                <p>In many real-world social networks, the clustering coefficient tends to be relatively high, often exceeding 0.2 or even 0.3. A value of 0.17 suggests that while there is some clustering in our Harry Potter social network, it may not be as tightly knit as some real-world social networks.</p>
+            </div>
+            <div id="assortativity-coefficient">
+                <h3>Assortativity Coefficient</h3>
+                <p>The assortativity coefficient quantifies the tendency of nodes in a network to connect to other nodes that are similar in some way. For real-world networks, a negative assortativity coefficient suggests disassortative mixing, meaning nodes with different characteristics are more likely to connect to each other.</p>
+            </div>
+        </section>
+
+        <section id="distributions">
+            <h2>Distribution Plots</h2>
+            <h3>Degree Distribution</h3>
+            <div id="vis"></div>
+            <p>The decreasing trend in the histogram indicates that as the degree value increases, the number of nodes with that degree decreases. This suggests that there are fewer nodes with higher degrees, which could indicate the presence of a few hubs or highly connected nodes, but they are relatively rare compared to the nodes with degree one.</p>
+            <div id="vis2"></div>
+            <p>The abrupt decrease in the plot between degrees 1 and 5 indicates that there are many nodes in the network with low degrees, particularly degree 1. After the initial sharp decline, the plot becomes almost horizontal (after a few protuisons), indicating that the number of nodes with higher degrees remains relatively constant.</p>
+            
+        </section>
+
+
+
+        <section id="visualizations">
+            <h2>Harry Potter Social Networks: Visualizations</h2>
+            <div id="network-graph">
+                <h3>Node Size by Weighted Degree Centrality</h3>
+                <iframe src="graphs/harry_potter_degree.html" style="width: 100%; height: 600px; border: none;"></iframe>
+            </div>
+            <div id="network-graph">
+                <h3>Node Size by Weighted Betweenness Centrality</h3>
+                <iframe src="graphs/harry_potter_betweenness.html" style="width: 100%; height: 600px; border: none;"></iframe>
+            </div>
+            <div id="network-graph">
+                <h3>Node Size by Weighted Closeness Centrality</h3>
+                <iframe src="graphs/harry_potter_closeness.html" style="width: 100%; height: 600px; border: none;"></iframe>
+            </div>
+            <div id="network-graph">
+                <h3>Node Size by Weighted Eigenvector Centrality</h3>
+                <iframe src="graphs/harry_potter_eigenvector.html" style="width: 100%; height: 600px; border: none;"></iframe>
+            </div>
+            <div id="network-graph">
+                <h3>Node Size by Weighted Harmonic Centrality</h3>
+                <iframe src="graphs/harry_potter_harmonic.html" style="width: 100%; height: 600px; border: none;"></iframe>
+            </div>
+            <div id="network-graph">
+                <h3>Node Size by Weighted PageRank Centrality</h3>
+                <iframe src="graphs/harry_potter_pagerank.html" style="width: 100%; height: 600px; border: none;"></iframe>
+            </div>
+            <div id="network-graph">
+                <h3>Node Size by Weighted Load Centrality</h3>
+                <iframe src="graphs/harry_potter_load.html" style="width: 100%; height: 600px; border: none;"></iframe>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
