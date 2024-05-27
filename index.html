@@ -18,7 +18,7 @@
         <section id="introduction">
             <h1>Harry Potter Social Network Data Analysis</h1>
         </section>
-        <section id="introduction">
+        <!--<section id="introduction">
             <h2>Introduction</h2>
             <p>This analysis explores the relationships between characters in the Harry Potter universe using network analysis.</p>
             <p>The Harry Potter real dataset has 254 nodes and 606 links. As we can see, the network is undirected but it is weighted.</p>
@@ -58,12 +58,16 @@
             <div id="vis2"></div>
             <p>The abrupt decrease in the plot between degrees 1 and 5 indicates that there are many nodes in the network with low degrees, particularly degree 1. After the initial sharp decline, the plot becomes almost horizontal (after a few protuisons), indicating that the number of nodes with higher degrees remains relatively constant.</p>
             
-        </section>
+        </section> -->
 
 
 
         <section id="visualizations">
             <h2>Harry Potter Social Networks: Visualizations</h2>
+            <div id="network-graph">
+                <h3>Communities</h3>
+                <iframe src="graphs/harry_potter_universe_communities.html" style="width: 100%; height: 600px; border: none;"></iframe>
+            </div>
             <div id="network-graph">
                 <h3>Node Size by Weighted Degree Centrality</h3>
                 <iframe src="graphs/harry_potter_degree.html" style="width: 100%; height: 600px; border: none;"></iframe>
