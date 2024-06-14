@@ -18,7 +18,7 @@
         <section id="introduction">
             <h1>Harry Potter Social Network Data Analysis</h1>
         </section>
-        <!--<section id="introduction">
+        <section id="introduction">
             <h2>Introduction</h2>
             <p>This analysis explores the relationships between characters in the Harry Potter universe using network analysis.</p>
             <p>The Harry Potter real dataset has 254 nodes and 606 links. As we can see, the network is undirected but it is weighted.</p>
@@ -53,17 +53,54 @@
         <section id="distributions">
             <h2>Distribution Plots</h2>
             <h3>Degree Distribution</h3>
+
             <div id="vis"></div>
+            <p>This visualization gives insight into the distribution of node degrees within the network, which is useful for analyzing the structure of the network.</p>
             <p>The decreasing trend in the histogram indicates that as the degree value increases, the number of nodes with that degree decreases. This suggests that there are fewer nodes with higher degrees, which could indicate the presence of a few hubs or highly connected nodes, but they are relatively rare compared to the nodes with degree one.</p>
-            <div id="vis2"></div>
-            <p>The abrupt decrease in the plot between degrees 1 and 5 indicates that there are many nodes in the network with low degrees, particularly degree 1. After the initial sharp decline, the plot becomes almost horizontal (after a few protuisons), indicating that the number of nodes with higher degrees remains relatively constant.</p>
+            <p>Based on this degree distribution plot, the network resambles the scale-free network structure, which would have a long tail on the right with a few highly connected hubs.</p>
             
-        </section> -->
+            <div id="vis2"></div>
+            <p>The x-axis represents the degrees (k) of nodes in the graph, and the y-axis represents the probability distribution P(k) (or the count of nodes with each degree normalized by the total number of nodes).</p>
+            <p>The abrupt decrease in the plot between degrees 1 and 5 indicates that there are many nodes in the network with low degrees, particularly degree 1. After the initial sharp decline, the plot becomes almost horizontal (after a few protuisons), indicating that the number of nodes with higher degrees remains relatively constant.</p>
+            <p>The shape of the plot suggests a scale-free network, common in many real-world networks like social networks and the internet.</p>
+
+            <div id="vis3"></div>
+            <p>We can visalize the same thing on a logarithmic scale as well.</p>
+
+            <h3>Clustering Coefficient Distribution</h3>
+
+            <div id="vis4"></div>
+            <p>Each bin represents a range of clustering coefficients, and the height of each bar represents the number of nodes with a clustering coefficient falling within that range.</p>
+            <p>The very tall first bar indicates that there is a large number of nodes in our network with a very low clustering coefficient, but they are, in fact, a few nodes that tend to form clusters with other nodes.</p>
+
+            <h3>Degree Centrality Distribution</h3>
+
+            <p>Degree centrality is a measure of the importance of a node in a graph based on the number of edges (or connections) it has.</p>
+            <div id="vis5"></div>
+            <p>The x-axis represents the degree centrality values, which range from 0 to 1. Nodes with a degree centrality of 0 have no connections, while nodes with a degree centrality of 1 are fully connected to all other nodes.</p>
+            <p>The tall bar at the lower end of the x-axis indicate that there is a large number of nodes in the network with low degree centrality. These nodes are likely located on the periphery of the network and have fewer connections compared to central nodes.</p>
+            <p>That node that has a degree centrality of around 0.25 is probably the main character, Harry Potter, who is connected to the most other characters.</p>
+
+            <h3>Betweenness Centrality Distribution</h3>
+
+            <p>Betweenness centrality is a measure of a node's importance based on the number of shortest paths that pass through it. Nodes with high betweenness centrality often act as bridges between different parts of the network.</p>
+            <div id="vis6"></div>
+            <p>The x-axis represents the betweenness centrality values, which typically range from 0 to 1. Higher values indicate nodes that act as important bridges or connectors between different parts of the network.</p>
+            <p>The tall bar at the lower end of the x-axis indicate that there is a large number of nodes in our network with low betweenness centrality.</p>
+            <p>Nodes with higher betweenness centrality are often crucial for maintaining efficient communication between different parts of the network.</p>
+
+            <h3>Eigenvector Centrality Distribution</h3>
+
+            <p>Eigenvector centrality measures the influence of a node in a network by considering both its direct connections and the importance of its neighbors.</p>
+            <div id="vis7"></div>
+            <p>This histogram also shows a similar shape.</p>
+
+        </section> 
 
 
 
         <section id="visualizations">
-            <h2>Harry Potter Social Networks: Visualizations</h2>
+            <h2>Network Visualizations</h2>
             <div id="network-graph">
                 <h3>Communities</h3>
                 <iframe src="graphs/harry_potter_universe_communities.html" style="width: 100%; height: 600px; border: none;"></iframe>

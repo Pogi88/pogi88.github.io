@@ -94,3 +94,240 @@ const spec = {
   vegaEmbed('#vis2', spec2).then(result => {
     console.log(result);
   }).catch(console.error);
+
+
+// Viz 3
+
+  const spec3 = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Log-Log Plot of Degree Distribution",
+    "width": 800,
+    "height": 600,
+    "data": {
+      "url": "https://raw.githubusercontent.com/Pogi88/pogi88.github.io/main/degree_distribution_hp_3.json",
+      "format": {
+        "type": "json"
+      }
+    },
+    "mark": {
+      "type": "line",
+      "point": true
+    },
+    "encoding": {
+      "x": {
+        "field": "degree",
+        "type": "quantitative",
+        "scale": {"type": "log"},
+        "axis": {
+          "title": "Degree k"
+        }
+      },
+      "y": {
+        "field": "count",
+        "type": "quantitative",
+        "scale": {"type": "log"},
+        "axis": {
+          "title": "P(k)"
+        }
+      },
+      "color": {
+        "value": "#2ca02c"
+      }
+    },
+    "title": "Log-Log Plot of Degree Distribution"
+  }
+
+  vegaEmbed('#vis3', spec3).then(result => {
+    console.log(result);
+  }).catch(console.error);
+
+
+  // Viz 4
+
+  const spec4 = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Clustering Coefficient Distribution of the Harry Potter Network",
+    "width": 800,
+    "height": 600,
+    "data": {
+      "url": "https://raw.githubusercontent.com/Pogi88/pogi88.github.io/main/clust_coeff_distribution_hp.json",
+      "format": {
+        "type": "json"
+      }
+    },
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "field": "clustering_coefficient",
+        "type": "quantitative",
+        "axis": {
+          "title": "Clustering Coefficient"
+        }
+      },
+      "y": {
+        "field": "frequency",
+        "type": "quantitative",
+        "axis": {
+          "title": "Frequency"
+        }
+      },
+      "color": {
+        "field": "bin_index",
+        "type": "nominal",
+        "scale": {
+          "domain": [0, 1, 2, 3],
+          "range": ["#1a472a", "#2a623d", "#5d5d5d", "#aaaaaa"]
+        },
+        "legend": null
+      }
+    },
+    "title": "Clustering Coefficient Distribution of the Harry Potter Network"
+  }
+
+  vegaEmbed('#vis4', spec4).then(result => {
+    console.log(result);
+  }).catch(console.error);
+
+
+  // Viz 5
+
+  const spec5 = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Degree Centrality Distribution of the Harry Potter Network",
+    "width": 800,
+    "height": 600,
+    "data": {
+      "url": "https://raw.githubusercontent.com/Pogi88/pogi88.github.io/main/degree_centrality_distribution_hp.json",
+      "format": {
+        "type": "json"
+      }
+    },
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "field": "degree_centrality",
+        "type": "quantitative",
+        "axis": {
+          "title": "Degree Centrality"
+        }
+      },
+      "y": {
+        "field": "frequency",
+        "type": "quantitative",
+        "axis": {
+          "title": "Frequency"
+        }
+      },
+      "color": {
+        "field": "bin_index",
+        "type": "nominal",
+        "scale": {
+          "domain": [0, 1, 2, 3],
+          "range": ["#0e1a40", "#222f5b", "#bebebe", "#946b2d"]
+        },
+        "legend": null
+      }
+    },
+    "title": "Degree Centrality Distribution of the Harry Potter Network"
+  }
+
+  vegaEmbed('#vis5', spec5).then(result => {
+    console.log(result);
+  }).catch(console.error);
+
+
+  // Viz 6
+
+  const spec6 = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Betweenness Centrality Distribution of the Harry Potter Network",
+    "width": 800,
+    "height": 600,
+    "data": {
+      "url": "https://raw.githubusercontent.com/Pogi88/pogi88.github.io/main/betweenness_centrality_distribution_hp.json",
+      "format": {
+        "type": "json"
+      }
+    },
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "field": "betweenness_centrality",
+        "type": "quantitative",
+        "axis": {
+          "title": "Betweenness Centrality"
+        }
+      },
+      "y": {
+        "field": "frequency",
+        "type": "quantitative",
+        "axis": {
+          "title": "Frequency"
+        }
+      },
+      "color": {
+        "field": "bin_index",
+        "type": "nominal",
+        "scale": {
+          "domain": [0, 1, 2, 3],
+          "range": ["#0e1a40", "#222f5b", "#bebebe", "#946b2d"]
+        },
+        "legend": null
+      }
+    },
+    "title": "Betweenness Centrality Distribution of the Harry Potter Network"
+  }
+  
+
+  vegaEmbed('#vis6', spec6).then(result => {
+    console.log(result);
+  }).catch(console.error);
+
+
+   // Viz 7
+
+   const spec7 = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Eigenvector Centrality Distribution of the Harry Potter Network",
+    "width": 800,
+    "height": 600,
+    "data": {
+      "url": "https://raw.githubusercontent.com/Pogi88/pogi88.github.io/main/eigenvector_centrality_distribution_hp.json",
+      "format": {
+        "type": "json"
+      }
+    },
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "field": "eigenvector_centrality",
+        "type": "quantitative",
+        "axis": {
+          "title": "Eigenvector Centrality"
+        }
+      },
+      "y": {
+        "field": "frequency",
+        "type": "quantitative",
+        "axis": {
+          "title": "Frequency"
+        }
+      },
+      "color": {
+        "field": "bin_index",
+        "type": "nominal",
+        "scale": {
+          "domain": [0, 1, 2, 3],
+          "range": ["#0e1a40", "#222f5b", "#bebebe", "#946b2d"]
+        },
+        "legend": null
+      }
+    },
+    "title": "Eigenvector Centrality Distribution of the Harry Potter Network"
+  }
+  
+  
+
+  vegaEmbed('#vis7', spec7).then(result => {
+    console.log(result);
+  }).catch(console.error);
