@@ -1,0 +1,102 @@
+[
+    {
+        "degree_centrality": 0.010281385281385282,
+        "frequency": 129,
+        "bin_index": 0
+    },
+    {
+        "degree_centrality": 0.022186147186147188,
+        "frequency": 46,
+        "bin_index": 1
+    },
+    {
+        "degree_centrality": 0.034090909090909095,
+        "frequency": 17,
+        "bin_index": 2
+    },
+    {
+        "degree_centrality": 0.045995670995671,
+        "frequency": 19,
+        "bin_index": 3
+    },
+    {
+        "degree_centrality": 0.057900432900432904,
+        "frequency": 9,
+        "bin_index": 0
+    },
+    {
+        "degree_centrality": 0.06980519480519481,
+        "frequency": 4,
+        "bin_index": 1
+    },
+    {
+        "degree_centrality": 0.08170995670995673,
+        "frequency": 3,
+        "bin_index": 2
+    },
+    {
+        "degree_centrality": 0.09361471861471862,
+        "frequency": 2,
+        "bin_index": 3
+    },
+    {
+        "degree_centrality": 0.10551948051948054,
+        "frequency": 1,
+        "bin_index": 0
+    },
+    {
+        "degree_centrality": 0.11742424242424243,
+        "frequency": 1,
+        "bin_index": 1
+    },
+    {
+        "degree_centrality": 0.12932900432900435,
+        "frequency": 0,
+        "bin_index": 2
+    },
+    {
+        "degree_centrality": 0.14123376623376624,
+        "frequency": 0,
+        "bin_index": 3
+    },
+    {
+        "degree_centrality": 0.15313852813852813,
+        "frequency": 0,
+        "bin_index": 0
+    },
+    {
+        "degree_centrality": 0.16504329004329005,
+        "frequency": 0,
+        "bin_index": 1
+    },
+    {
+        "degree_centrality": 0.17694805194805197,
+        "frequency": 0,
+        "bin_index": 2
+    },
+    {
+        "degree_centrality": 0.18885281385281386,
+        "frequency": 0,
+        "bin_index": 3
+    },
+    {
+        "degree_centrality": 0.20075757575757577,
+        "frequency": 0,
+        "bin_index": 0
+    },
+    {
+        "degree_centrality": 0.21266233766233766,
+        "frequency": 0,
+        "bin_index": 1
+    },
+    {
+        "degree_centrality": 0.22456709956709958,
+        "frequency": 0,
+        "bin_index": 2
+    },
+    {
+        "degree_centrality": 0.2364718614718615,
+        "frequency": 1,
+        "bin_index": 3
+    }
+]
