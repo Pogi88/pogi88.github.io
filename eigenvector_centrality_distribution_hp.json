@@ -1,0 +1,102 @@
+[
+    {
+        "eigenvector_centrality": 0.01078698925309635,
+        "frequency": 111,
+        "bin_index": 0
+    },
+    {
+        "eigenvector_centrality": 0.0323337866084457,
+        "frequency": 43,
+        "bin_index": 1
+    },
+    {
+        "eigenvector_centrality": 0.053880583963795046,
+        "frequency": 35,
+        "bin_index": 2
+    },
+    {
+        "eigenvector_centrality": 0.0754273813191444,
+        "frequency": 12,
+        "bin_index": 3
+    },
+    {
+        "eigenvector_centrality": 0.09697417867449373,
+        "frequency": 8,
+        "bin_index": 0
+    },
+    {
+        "eigenvector_centrality": 0.1185209760298431,
+        "frequency": 7,
+        "bin_index": 1
+    },
+    {
+        "eigenvector_centrality": 0.14006777338519244,
+        "frequency": 7,
+        "bin_index": 2
+    },
+    {
+        "eigenvector_centrality": 0.1616145707405418,
+        "frequency": 4,
+        "bin_index": 3
+    },
+    {
+        "eigenvector_centrality": 0.18316136809589112,
+        "frequency": 1,
+        "bin_index": 0
+    },
+    {
+        "eigenvector_centrality": 0.2047081654512405,
+        "frequency": 0,
+        "bin_index": 1
+    },
+    {
+        "eigenvector_centrality": 0.22625496280658983,
+        "frequency": 3,
+        "bin_index": 2
+    },
+    {
+        "eigenvector_centrality": 0.24780176016193917,
+        "frequency": 0,
+        "bin_index": 3
+    },
+    {
+        "eigenvector_centrality": 0.2693485575172885,
+        "frequency": 0,
+        "bin_index": 0
+    },
+    {
+        "eigenvector_centrality": 0.29089535487263785,
+        "frequency": 0,
+        "bin_index": 1
+    },
+    {
+        "eigenvector_centrality": 0.3124421522279872,
+        "frequency": 0,
+        "bin_index": 2
+    },
+    {
+        "eigenvector_centrality": 0.3339889495833365,
+        "frequency": 0,
+        "bin_index": 3
+    },
+    {
+        "eigenvector_centrality": 0.3555357469386859,
+        "frequency": 0,
+        "bin_index": 0
+    },
+    {
+        "eigenvector_centrality": 0.3770825442940352,
+        "frequency": 0,
+        "bin_index": 1
+    },
+    {
+        "eigenvector_centrality": 0.39862934164938457,
+        "frequency": 0,
+        "bin_index": 2
+    },
+    {
+        "eigenvector_centrality": 0.42017613900473394,
+        "frequency": 1,
+        "bin_index": 3
+    }
+]
