@@ -1,0 +1,82 @@
+[
+    {
+        "clustering_coefficient": 0.0,
+        "frequency": 115
+    },
+    {
+        "clustering_coefficient": 0.05,
+        "frequency": 12
+    },
+    {
+        "clustering_coefficient": 0.1,
+        "frequency": 23
+    },
+    {
+        "clustering_coefficient": 0.15000000000000002,
+        "frequency": 12
+    },
+    {
+        "clustering_coefficient": 0.2,
+        "frequency": 19
+    },
+    {
+        "clustering_coefficient": 0.25,
+        "frequency": 8
+    },
+    {
+        "clustering_coefficient": 0.30000000000000004,
+        "frequency": 14
+    },
+    {
+        "clustering_coefficient": 0.35000000000000003,
+        "frequency": 0
+    },
+    {
+        "clustering_coefficient": 0.4,
+        "frequency": 2
+    },
+    {
+        "clustering_coefficient": 0.45,
+        "frequency": 1
+    },
+    {
+        "clustering_coefficient": 0.5,
+        "frequency": 5
+    },
+    {
+        "clustering_coefficient": 0.55,
+        "frequency": 1
+    },
+    {
+        "clustering_coefficient": 0.6000000000000001,
+        "frequency": 0
+    },
+    {
+        "clustering_coefficient": 0.65,
+        "frequency": 6
+    },
+    {
+        "clustering_coefficient": 0.7000000000000001,
+        "frequency": 0
+    },
+    {
+        "clustering_coefficient": 0.75,
+        "frequency": 0
+    },
+    {
+        "clustering_coefficient": 0.8,
+        "frequency": 1
+    },
+    {
+        "clustering_coefficient": 0.8500000000000001,
+        "frequency": 0
+    },
+    {
+        "clustering_coefficient": 0.9,
+        "frequency": 0
+    },
+    {
+        "clustering_coefficient": 0.9500000000000001,
+        "frequency": 13
+    }
+]
