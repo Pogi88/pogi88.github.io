@@ -1,0 +1,102 @@
+[
+    {
+        "betweenness_centrality": 0.010371560828245965,
+        "frequency": 196,
+        "bin_index": 0
+    },
+    {
+        "betweenness_centrality": 0.031114682484737893,
+        "frequency": 24,
+        "bin_index": 1
+    },
+    {
+        "betweenness_centrality": 0.05185780414122983,
+        "frequency": 5,
+        "bin_index": 2
+    },
+    {
+        "betweenness_centrality": 0.07260092579772176,
+        "frequency": 4,
+        "bin_index": 3
+    },
+    {
+        "betweenness_centrality": 0.09334404745421368,
+        "frequency": 1,
+        "bin_index": 0
+    },
+    {
+        "betweenness_centrality": 0.11408716911070561,
+        "frequency": 1,
+        "bin_index": 1
+    },
+    {
+        "betweenness_centrality": 0.13483029076719755,
+        "frequency": 0,
+        "bin_index": 2
+    },
+    {
+        "betweenness_centrality": 0.1555734124236895,
+        "frequency": 0,
+        "bin_index": 3
+    },
+    {
+        "betweenness_centrality": 0.1763165340801814,
+        "frequency": 0,
+        "bin_index": 0
+    },
+    {
+        "betweenness_centrality": 0.19705965573667333,
+        "frequency": 0,
+        "bin_index": 1
+    },
+    {
+        "betweenness_centrality": 0.21780277739316528,
+        "frequency": 0,
+        "bin_index": 2
+    },
+    {
+        "betweenness_centrality": 0.23854589904965717,
+        "frequency": 0,
+        "bin_index": 3
+    },
+    {
+        "betweenness_centrality": 0.2592890207061491,
+        "frequency": 0,
+        "bin_index": 0
+    },
+    {
+        "betweenness_centrality": 0.28003214236264107,
+        "frequency": 0,
+        "bin_index": 1
+    },
+    {
+        "betweenness_centrality": 0.300775264019133,
+        "frequency": 0,
+        "bin_index": 2
+    },
+    {
+        "betweenness_centrality": 0.3215183856756249,
+        "frequency": 0,
+        "bin_index": 3
+    },
+    {
+        "betweenness_centrality": 0.34226150733211685,
+        "frequency": 0,
+        "bin_index": 0
+    },
+    {
+        "betweenness_centrality": 0.36300462898860875,
+        "frequency": 0,
+        "bin_index": 1
+    },
+    {
+        "betweenness_centrality": 0.3837477506451007,
+        "frequency": 0,
+        "bin_index": 2
+    },
+    {
+        "betweenness_centrality": 0.40449087230159264,
+        "frequency": 1,
+        "bin_index": 3
+    }
+]
