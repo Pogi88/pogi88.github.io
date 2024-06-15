@@ -131,7 +131,7 @@ const spec = {
         }
       },
       "color": {
-        "value": "#2ca02c"
+        "value": "#eeba30"
       }
     },
     "title": "Log-Log Plot of Degree Distribution"
