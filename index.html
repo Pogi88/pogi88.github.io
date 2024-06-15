@@ -14,23 +14,19 @@
         <h1>Harry Potter Real Data Analysis</h1>
     </header>
     <main>
-
-        <section id="introduction">
-            <h1>Harry Potter Social Network Data Analysis</h1>
-        </section>
         <section id="introduction">
             <h2>Introduction</h2>
             <p>This analysis explores the relationships between characters in the Harry Potter universe using network analysis.</p>
-            <p>The Harry Potter real dataset has 254 nodes and 606 links. As we can see, the network is undirected but it is weighted.</p>
-            <p>The nodes here are all the characters that appear throughout the whole Harry Potter book series (all 7 books), and links are the relationships between them. The links are based on whether two characters appear in a window of five sentences in the text (the text version of the respective book). The weight values are established based on how many times a certain pair appears in the before-mentioned context.</p>
+            <p>The Harry Potter real dataset has 254 nodes and 606 links. The network is undirected but it is weighted.</p>
+            <p>The nodes here are all the characters that appear throughout the whole Harry Potter book series (all 7 books), and links are the relationships between them. The links are based on whether two characters appear in a window of five sentences in the text. The weight values are established based on how many times a certain pair appears in the before-mentioned context.</p>
         </section>
-
+        
         <section id="network-properties">
             <h2>Network Properties</h2>
             <div id="diameter">
                 <h3>Diameter</h3>
                 <p>The diameter of the network is 9, which means the longest shortest path between any two characters is 9 links.</p>
-                <p>In the context of this network representing characters of the Harry Potter Universe connected by character relationships, the diameter of 9 would mean that the longest shortest path between any two characters in terms of the number of relationships you have to traverse is 9, meaning that the longest chain of character relationships connecting any two character in the network would have 9 links.</p>
+                <p>The longest chain of character relationships connecting any two characters in the network would have 9 links.</p>
             </div>
             <div id="average-degree">
                 <h3>Average Degree</h3>
@@ -38,172 +34,144 @@
             </div>
             <div id="average-shortest-path">
                 <h3>Average Shortest Path</h3>
-                <p>In many real-world social networks, the average shortest path tends to be relatively short, typically ranging from 3 to 7. An average shortest path of 3.53 in our Harry Potter social network could indicate that characters are relatively closely connected, suggesting a high level of interaction and communication within the network.</p>
+                <p>The average shortest path of 3.53 in our Harry Potter social network suggests that characters are relatively closely connected, indicating a high level of interaction and communication within the network.</p>
             </div>
             <div id="average-clustering-coefficient">
                 <h3>Average Clustering Coefficient</h3>
-                <p>In many real-world social networks, the clustering coefficient tends to be relatively high, often exceeding 0.2 or even 0.3. A value of 0.17 suggests that while there is some clustering in our Harry Potter social network, it may not be as tightly knit as some real-world social networks.</p>
+                <p>A value of 0.17 suggests that while there is some clustering in our Harry Potter social network, it may not be as tightly knit as some real-world social networks.</p>
             </div>
             <div id="assortativity-coefficient">
                 <h3>Assortativity Coefficient</h3>
-                <p>The assortativity coefficient quantifies the tendency of nodes in a network to connect to other nodes that are similar in some way. For real-world networks, a negative assortativity coefficient suggests disassortative mixing, meaning nodes with different characteristics are more likely to connect to each other.</p>
+                <p>The assortativity coefficient quantifies the tendency of nodes in a network to connect to other nodes that are similar in some way. A negative assortativity coefficient suggests disassortative mixing, meaning nodes with different characteristics are more likely to connect to each other.</p>
             </div>
         </section>
 
         <section id="distributions">
             <h2>Distribution Plots</h2>
             <h3>Degree Distribution</h3>
-
-            <div id="vis"></div>
-            <p>This visualization gives insight into the distribution of node degrees within the network, which is useful for analyzing the structure of the network.</p>
-            <p>The decreasing trend in the histogram indicates that as the degree value increases, the number of nodes with that degree decreases. This suggests that there are fewer nodes with higher degrees, which could indicate the presence of a few hubs or highly connected nodes, but they are relatively rare compared to the nodes with degree one.</p>
-            <p>Based on this degree distribution plot, the network resambles the scale-free network structure, which would have a long tail on the right with a few highly connected hubs.</p>
-            
-            <div id="vis2"></div>
+            <div class="visualization">
+                <div id="vis"></div>
+            </div>
+            <p>The decreasing trend in the histogram indicates that as the degree value increases, the number of nodes with that degree decreases. This suggests that there are fewer nodes with higher degrees, which could indicate the presence of a few hubs or highly connected nodes.</p>
+            <div class="visualization">
+                <div id="vis2"></div>
+            </div>
             <p>The x-axis represents the degrees (k) of nodes in the graph, and the y-axis represents the probability distribution P(k) (or the count of nodes with each degree normalized by the total number of nodes).</p>
-            <p>The abrupt decrease in the plot between degrees 1 and 5 indicates that there are many nodes in the network with low degrees, particularly degree 1. After the initial sharp decline, the plot becomes almost horizontal (after a few protuisons), indicating that the number of nodes with higher degrees remains relatively constant.</p>
             <p>The shape of the plot suggests a scale-free network, common in many real-world networks like social networks and the internet.</p>
-
-            <div id="vis3"></div>
-            <p>We can visalize the same thing on a logarithmic scale as well.</p>
-
+            <div class="visualization">
+                <div id="vis3"></div>
+            </div>
+            <p>We can visualize the same thing on a logarithmic scale as well.</p>
             <h3>Clustering Coefficient Distribution</h3>
-
-            <div id="vis4"></div>
-            <p>Each bin represents a range of clustering coefficients, and the height of each bar represents the number of nodes with a clustering coefficient falling within that range.</p>
-            <p>The very tall first bar indicates that there is a large number of nodes in our network with a very low clustering coefficient, but they are, in fact, a few nodes that tend to form clusters with other nodes.</p>
-
+            <div class="visualization">
+                <div id="vis4"></div>
+            </div>
+            <p>The very tall first bar indicates that there is a large number of nodes in our network with a very low clustering coefficient, but there are a few nodes that tend to form clusters with other nodes.</p>
             <h3>Degree Centrality Distribution</h3>
-
             <p>Degree centrality is a measure of the importance of a node in a graph based on the number of edges (or connections) it has.</p>
-            <div id="vis5"></div>
-            <p>The x-axis represents the degree centrality values, which range from 0 to 1. Nodes with a degree centrality of 0 have no connections, while nodes with a degree centrality of 1 are fully connected to all other nodes.</p>
-            <p>The tall bar at the lower end of the x-axis indicate that there is a large number of nodes in the network with low degree centrality. These nodes are likely located on the periphery of the network and have fewer connections compared to central nodes.</p>
-            <p>That node that has a degree centrality of around 0.25 is probably the main character, Harry Potter, who is connected to the most other characters.</p>
-
+            <div class="visualization">
+                <div id="vis5"></div>
+            </div>
+            <p>The tall bar at the lower end of the x-axis indicates that there is a large number of nodes in the network with low degree centrality. These nodes are likely located on the periphery of the network and have fewer connections compared to central nodes.</p>
             <h3>Betweenness Centrality Distribution</h3>
-
             <p>Betweenness centrality is a measure of a node's importance based on the number of shortest paths that pass through it. Nodes with high betweenness centrality often act as bridges between different parts of the network.</p>
-            <div id="vis6"></div>
-            <p>The x-axis represents the betweenness centrality values, which typically range from 0 to 1. Higher values indicate nodes that act as important bridges or connectors between different parts of the network.</p>
-            <p>The tall bar at the lower end of the x-axis indicate that there is a large number of nodes in our network with low betweenness centrality.</p>
-            <p>Nodes with higher betweenness centrality are often crucial for maintaining efficient communication between different parts of the network.</p>
-
+            <div class="visualization">
+                <div id="vis6"></div>
+            </div>
+            <p>The tall bar at the lower end of the x-axis indicates that there is a large number of nodes in our network with low betweenness centrality.</p>
             <h3>Eigenvector Centrality Distribution</h3>
-
             <p>Eigenvector centrality measures the influence of a node in a network by considering both its direct connections and the importance of its neighbors.</p>
-            <div id="vis7"></div>
+            <div class="visualization">
+                <div id="vis7"></div>
+            </div>
             <p>This histogram also shows a similar shape.</p>
-
-        </section> 
+        </section>
 
         <section id="centrality-measures">
-
-            <h2>Centrality Measures: Identifying Important Nodes</h2>
-
+            <h2>Centrality Measures: Identifying Important Nodes</h3>
             <h3>Degree Centrality</h3>
-
             <ul>
                 <li>Degree centrality measures the number of edges connected to a node.</li>
-                <li>Nodes with higher degree centrality are more connected within the network, indicating a higher level of influence or importance. In a social network, nodes with high degree centrality may represent individuals with many connections or friends.</li>
-                <li>In our particular case, if a node has a high degree centrality, it means that the given character has some kind of a relationship with many others, making him/her more important in the storyline.</li>
+                <li>Nodes with higher degree centrality are more connected within the network, indicating a higher level of influence or importance.</li>
             </ul>
-
             <h3>Betweenness Centrality</h3>
-
             <ul>
                 <li>Betweenness centrality measures the extent to which a node lies on the shortest paths between other nodes in the network.</li>
-                <li>Nodes with high betweenness centrality act as bridges or mediators in the network, facilitating communication and information flow between different parts of the network. They are important for maintaining the network's connectivity and efficiency.</li>
-                <li>In this networok, if a node has a high betweenness centrality value, it means that the given character connects others to each other, he/she is a mediator.</li>
+                <li>Nodes with high betweenness centrality act as bridges or mediators in the network.</li>
             </ul>
-
             <h3>Closeness Centrality</h3>
-
             <ul>
                 <li>Closeness centrality measures the average distance of a node to all other nodes in the network.</li>
-                <li>Nodes with high closeness centrality are close to many other nodes in the network, indicating their ability to quickly interact or exchange information with other nodes. They are often considered to be central in terms of communication efficiency.</li>
-                <li>In our case, if a node has a high closeness centrality value, it means that the given character can easily interact with most of the others or can easily find a mediator to reach someone else.</li>
+                <li>Nodes with high closeness centrality are close to many other nodes in the network.</li>
             </ul>
-
             <h3>Eigenvector Centrality</h3>
-
             <ul>
                 <li>Eigenvector centrality measures the importance of a node in the network by considering the centrality of its neighbors.</li>
-                <li>Nodes with high eigenvector centrality are connected to other nodes that are themselves central, indicating their influence within the network. It considers both the number of connections a node has and the importance of the nodes it is connected to.</li>
-                <li>In this case, if a node has a high eigenvector centrality value, it means that the given character surrounds him/herself with other important, influential characters.</li>
+                <li>Nodes with high eigenvector centrality are connected to other nodes that are themselves central.</li>
             </ul>
-
             <h3>PageRank Centrality</h3>
-
             <ul>
-                <li>PageRank evaluates the importance of a node in a network by considering both the quantity and quality of its incoming links. It assigns higher scores to nodes that are linked to by other nodes with high PageRank scores, recursively propagating importance throughout the network.</li>
-                <li>Nodes with high PageRank are not only well-connected but also connected to other important nodes, making them pivotal in information dissemination or authority distribution within the network. In web networks, nodes with high PageRank often correspond to web pages with high visibility or credibility.</li>
-                <li>In our case, pagerank centrality measures the all in all importance and influence and trustworthiness of a character (node).</li>
+                <li>PageRank evaluates the importance of a node in a network by considering both the quantity and quality of its incoming links.</li>
+                <li>Nodes with high PageRank are connected to other important nodes, making them pivotal in information dissemination.</li>
             </ul>
-
             <h3>Harmonic Centrality</h3>
-
             <ul>
-                <li>Harmonic centrality measures the centrality of a node in a network by considering the sum of the reciprocals of the shortest path distances from that node to all other nodes. It emphasizes nodes that are close to many other nodes in the network, assigning higher scores to nodes that are not only well-connected but also have short paths to other nodes.</li>
-                <li>Nodes with high harmonic centrality are positioned to efficiently communicate or exchange information with other nodes, playing crucial roles in facilitating interactions or spreading influence within the network.</li>
-                <li>In the Harry Potter network, if a node has a high harmonic centrality value, it means that the given character has a very central role, information flows through him/her, others would not be able to effectively communicate without him/her.</li>
+                <li>Harmonic centrality measures the centrality of a node in a network by considering the sum of the reciprocals of the shortest path distances from that node to all other nodes.</li>
+                <li>Nodes with high harmonic centrality are positioned to efficiently communicate with other nodes.</li>
             </ul>
-
             <h3>Load Centrality</h3>
-
             <ul>
-                <li>Load centrality evaluates the centrality of a node in a network based on the amount of traffic or load that passes through it. Nodes that lie on many short paths between other nodes tend to have high load centrality, indicating their importance in facilitating communication or resource exchange within the network.</li>
-                <li>Nodes with high load centrality serve as critical junctions for information or resource flow, playing key roles in maintaining network connectivity and efficiency.</li>
-                <li>In this case, if a node has a high load centrality value, it means that many others keep in touch, communicate through the given character.</li>
+                <li>Load centrality evaluates the centrality of a node in a network based on the amount of traffic or load that passes through it.</li>
+                <li>Nodes with high load centrality serve as critical junctions for information or resource flow.</li>
             </ul>
-
             <p>Now, we can visualize the comparison between these centralities in every combination:</p>
-            <div id="vis8"></div>
+            <div id="vis8-container">
+                <div id="vis8"></div>
+            </div>
             <p>Here we can look for correlations between the respective measures.</p>
-
             <h3>Identifying the top 10 nodes for each metric</h3>
-
             <p>We need to create a new dataframe to store these important nodes based on the centralities.</p>
-            <div id="vis9"></div>
+            <div class="visualization">
+                <div id="vis9"></div>
+            </div>
             <p>When it comes to the top 10 nodes in our Harry Potter network, almost all centrality measures agree on the Harry Potter node to be the most influential node, which is not surprising, considering he is the main character of the books.</p>
-            <p>Dobby and Percy Weasley could be considered all in all the second most influential nodes, since they take the first or second place mostly at every centrality measure.</p>
-            <p>We find it surprising that Hermione and Ron do not really appear as influential nodes.</p>
-
+            <p>Dobby and Percy Weasley could be considered the second most influential nodes since they take the first or second place mostly at every centrality measure.</p>
+            <p>It is surprising that Hermione and Ron do not really appear as influential nodes.</p>
         </section>
 
         <section id="visualizations">
             <h2>Network Visualizations</h2>
             <div id="network-graph">
                 <h3>Communities</h3>
-                <iframe src="graphs/harry_potter_universe_communities.html" style="width: 100%; height: 600px; border: none;"></iframe>
+                <iframe src="graphs/harry_potter_universe_communities.html"></iframe>
             </div>
             <div id="network-graph">
                 <h3>Node Size by Weighted Degree Centrality</h3>
-                <iframe src="graphs/harry_potter_degree.html" style="width: 100%; height: 600px; border: none;"></iframe>
+                <iframe src="graphs/harry_potter_degree.html"></iframe>
             </div>
             <div id="network-graph">
                 <h3>Node Size by Weighted Betweenness Centrality</h3>
-                <iframe src="graphs/harry_potter_betweenness.html" style="width: 100%; height: 600px; border: none;"></iframe>
+                <iframe src="graphs/harry_potter_betweenness.html"></iframe>
             </div>
             <div id="network-graph">
                 <h3>Node Size by Weighted Closeness Centrality</h3>
-                <iframe src="graphs/harry_potter_closeness.html" style="width: 100%; height: 600px; border: none;"></iframe>
+                <iframe src="graphs/harry_potter_closeness.html"></iframe>
             </div>
             <div id="network-graph">
                 <h3>Node Size by Weighted Eigenvector Centrality</h3>
-                <iframe src="graphs/harry_potter_eigenvector.html" style="width: 100%; height: 600px; border: none;"></iframe>
+                <iframe src="graphs/harry_potter_eigenvector.html"></iframe>
             </div>
             <div id="network-graph">
                 <h3>Node Size by Weighted Harmonic Centrality</h3>
-                <iframe src="graphs/harry_potter_harmonic.html" style="width: 100%; height: 600px; border: none;"></iframe>
+                <iframe src="graphs/harry_potter_harmonic.html"></iframe>
             </div>
             <div id="network-graph">
                 <h3>Node Size by Weighted PageRank Centrality</h3>
-                <iframe src="graphs/harry_potter_pagerank.html" style="width: 100%; height: 600px; border: none;"></iframe>
+                <iframe src="graphs/harry_potter_pagerank.html"></iframe>
             </div>
             <div id="network-graph">
                 <h3>Node Size by Weighted Load Centrality</h3>
-                <iframe src="graphs/harry_potter_load.html" style="width: 100%; height: 600px; border: none;"></iframe>
+                <iframe src="graphs/harry_potter_load.html"></iframe>
             </div>
         </section>
     </main>

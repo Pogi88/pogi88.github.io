@@ -1,41 +1,94 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
 header {
   background: #333;
   color: #fff;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
 }
 
 main {
-  padding: 1rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 section {
-  margin: 1rem 0;
+  margin: 2rem 0;
 }
 
-h1, h2, h3 {
-  color: #333;
+section h2 {
+  color: #444;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-footer {
-  background: #333;
-  color: #fff;
-  text-align: center;
-  padding: 1rem 0;
-  position: fixed;
+section h3 {
+  color: #666;
+  margin-top: 1.5rem;
+}
+
+.visualization {
   width: 100%;
-  bottom: 0;
-}
-
-#vis, #vis2 {
-  width: 80%;
   max-width: 1000px;
   height: auto;
+  margin: 1rem auto;
+  display: block;
+  text-align: center;
+}
+
+.visualization > div {
+  display: inline-block;
+  width: 100%;
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+  margin-top: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#vis8-container {
+  overflow-x: auto;
+  text-align: center;
+}
+
+#vis8 {
+  width: 1200px; 
+  height: auto;
+  display: inline-block;
+  margin: 0 auto;
 }
