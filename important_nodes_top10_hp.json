@@ -1,0 +1,102 @@
+[
+    {
+        "Index": 1,
+        "Degree Centrality": "Dobby",
+        "Betweenness Centrality": "Harry Potter",
+        "Closeness Centrality": "Harry Potter",
+        "Eigenvector Centrality": "Dobby",
+        "Pagerank Centrality": "Harry Potter",
+        "Harmonic Centrality": "Percy Weasley",
+        "Load Centrality": "Harry Potter"
+    },
+    {
+        "Index": 2,
+        "Degree Centrality": "Harry Potter",
+        "Betweenness Centrality": "Percy Weasley",
+        "Closeness Centrality": "Luna Lovegood",
+        "Eigenvector Centrality": "Harry Potter",
+        "Pagerank Centrality": "Dobby",
+        "Harmonic Centrality": "Harry Potter",
+        "Load Centrality": "Percy Weasley"
+    },
+    {
+        "Index": 3,
+        "Degree Centrality": "Winky",
+        "Betweenness Centrality": "Draco Malfoy",
+        "Closeness Centrality": "Lee Jordan",
+        "Eigenvector Centrality": "Winky",
+        "Pagerank Centrality": "Kreacher",
+        "Harmonic Centrality": "Lee Jordan",
+        "Load Centrality": "Draco Malfoy"
+    },
+    {
+        "Index": 4,
+        "Degree Centrality": "Kreacher",
+        "Betweenness Centrality": "Lee Jordan",
+        "Closeness Centrality": "Percy Weasley",
+        "Eigenvector Centrality": "Kreacher",
+        "Pagerank Centrality": "Winky",
+        "Harmonic Centrality": "Draco Malfoy",
+        "Load Centrality": "Lee Jordan"
+    },
+    {
+        "Index": 5,
+        "Degree Centrality": "Hedwig",
+        "Betweenness Centrality": "Luna Lovegood",
+        "Closeness Centrality": "Draco Malfoy",
+        "Eigenvector Centrality": "Griphook",
+        "Pagerank Centrality": "Hedwig",
+        "Harmonic Centrality": "Albus Dumbledore",
+        "Load Centrality": "Luna Lovegood"
+    },
+    {
+        "Index": 6,
+        "Degree Centrality": "Firenze",
+        "Betweenness Centrality": "Albus Dumbledore",
+        "Closeness Centrality": "Neville Longbottom",
+        "Eigenvector Centrality": "Lucius Malfoy",
+        "Pagerank Centrality": "Dean Thomas",
+        "Harmonic Centrality": "Luna Lovegood",
+        "Load Centrality": "Albus Dumbledore"
+    },
+    {
+        "Index": 7,
+        "Degree Centrality": "Griphook",
+        "Betweenness Centrality": "Sirius Black",
+        "Closeness Centrality": "Severus Snape",
+        "Eigenvector Centrality": "Hedwig",
+        "Pagerank Centrality": "Albus Dumbledore",
+        "Harmonic Centrality": "Hedwig",
+        "Load Centrality": "Sirius Black"
+    },
+    {
+        "Index": 8,
+        "Degree Centrality": "Bane",
+        "Betweenness Centrality": "Hedwig",
+        "Closeness Centrality": "Sirius Black",
+        "Eigenvector Centrality": "Albus Dumbledore",
+        "Pagerank Centrality": "Draco Malfoy",
+        "Harmonic Centrality": "Neville Longbottom",
+        "Load Centrality": "Hedwig"
+    },
+    {
+        "Index": 9,
+        "Degree Centrality": "Dean Thomas",
+        "Betweenness Centrality": "Ginny Weasley",
+        "Closeness Centrality": "Albus Dumbledore",
+        "Eigenvector Centrality": "Firenze",
+        "Pagerank Centrality": "Griphook",
+        "Harmonic Centrality": "Sirius Black",
+        "Load Centrality": "Ginny Weasley"
+    },
+    {
+        "Index": 10,
+        "Degree Centrality": "Draco Malfoy",
+        "Betweenness Centrality": "Severus Snape",
+        "Closeness Centrality": "Hedwig",
+        "Eigenvector Centrality": "Draco Malfoy",
+        "Pagerank Centrality": "Firenze",
+        "Harmonic Centrality": "Severus Snape",
+        "Load Centrality": "Severus Snape"
+    }
+]
