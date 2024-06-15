@@ -382,3 +382,35 @@ const spec = {
   vegaEmbed('#vis8', spec8).then(result => {
     console.log(result);
   }).catch(console.error);
+
+
+    // Viz 9
+
+    const spec9 = {
+      "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+      "description": "Top Nodes by Various Centrality Measures in the Harry Potter Network",
+      "data": {
+        "url": "https://raw.githubusercontent.com/Pogi88/pogi88.github.io/main/important_nodes_top10_hp.json",
+        "format": {
+          "type": "json"
+        }
+      },
+      "mark": "text",
+      "encoding": {
+        "row": {"field": "Rank", "type": "ordinal"},
+        "column": {"field": "Centrality Measure", "type": "nominal"},
+        "text": {"field": "Node", "type": "nominal"},
+        "tooltip": [
+          {"field": "Rank", "type": "ordinal"},
+          {"field": "Centrality Measure", "type": "nominal"},
+          {"field": "Node", "type": "nominal"}
+        ]
+      }
+    }
+    
+    
+    
+  
+    vegaEmbed('#vis9', spec9).then(result => {
+      console.log(result);
+    }).catch(console.error);
