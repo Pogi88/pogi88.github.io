@@ -331,3 +331,54 @@ const spec = {
   vegaEmbed('#vis7', spec7).then(result => {
     console.log(result);
   }).catch(console.error);
+
+
+  // Viz 8
+
+  const spec8 = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Scatter plots of centrality measures for the Harry Potter Network",
+    "data": {
+      "url": "https://raw.githubusercontent.com/Pogi88/pogi88.github.io/main/centralities_correlations_hp.json",
+      "format": {
+        "type": "json"
+      }
+    },
+    "repeat": {
+      "row": ["degree", "between", "closeness", "eigenvector", "pagerank", "harmonic", "load"],
+      "column": ["degree", "between", "closeness", "eigenvector", "pagerank", "harmonic", "load"]
+    },
+    "spec": {
+      "mark": "point",
+      "encoding": {
+        "x": {
+          "field": {"repeat": "column"},
+          "type": "quantitative"
+        },
+        "y": {
+          "field": {"repeat": "row"},
+          "type": "quantitative"
+        },
+        "color": {
+          "datum": {"repeat": "column"},
+          "type": "nominal",
+          "scale": {
+            "domain": ["degree", "between", "closeness", "eigenvector", "pagerank", "harmonic", "load"],
+            "range": ["#740001", "#eeba30", "#1a472a", "#5d5d5d", "#0e1a40", "#946b2d", "#aaaaaa"]
+          }
+        }
+      }
+    },
+    "resolve": {
+      "scale": {
+        "independent": true
+      }
+    }
+  }
+  
+  
+  
+
+  vegaEmbed('#vis8', spec8).then(result => {
+    console.log(result);
+  }).catch(console.error);

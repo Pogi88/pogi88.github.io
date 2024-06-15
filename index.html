@@ -97,7 +97,71 @@
 
         </section> 
 
+        <section id="centrality-measures">
 
+            <h2>Centrality Measures: Identifying Important Nodes</h2>
+
+            <h3>Degree Centrality</h3>
+
+            <ul>
+                <li>Degree centrality measures the number of edges connected to a node.</li>
+                <li>Nodes with higher degree centrality are more connected within the network, indicating a higher level of influence or importance. In a social network, nodes with high degree centrality may represent individuals with many connections or friends.</li>
+                <li>In our particular case, if a node has a high degree centrality, it means that the given character has some kind of a relationship with many others, making him/her more important in the storyline.</li>
+            </ul>
+
+            <h3>Betweenness Centrality</h3>
+
+            <ul>
+                <li>Betweenness centrality measures the extent to which a node lies on the shortest paths between other nodes in the network.</li>
+                <li>Nodes with high betweenness centrality act as bridges or mediators in the network, facilitating communication and information flow between different parts of the network. They are important for maintaining the network's connectivity and efficiency.</li>
+                <li>In this networok, if a node has a high betweenness centrality value, it means that the given character connects others to each other, he/she is a mediator.</li>
+            </ul>
+
+            <h3>Closeness Centrality</h3>
+
+            <ul>
+                <li>Closeness centrality measures the average distance of a node to all other nodes in the network.</li>
+                <li>Nodes with high closeness centrality are close to many other nodes in the network, indicating their ability to quickly interact or exchange information with other nodes. They are often considered to be central in terms of communication efficiency.</li>
+                <li>In our case, if a node has a high closeness centrality value, it means that the given character can easily interact with most of the others or can easily find a mediator to reach someone else.</li>
+            </ul>
+
+            <h3>Eigenvector Centrality</h3>
+
+            <ul>
+                <li>Eigenvector centrality measures the importance of a node in the network by considering the centrality of its neighbors.</li>
+                <li>Nodes with high eigenvector centrality are connected to other nodes that are themselves central, indicating their influence within the network. It considers both the number of connections a node has and the importance of the nodes it is connected to.</li>
+                <li>In this case, if a node has a high eigenvector centrality value, it means that the given character surrounds him/herself with other important, influential characters.</li>
+            </ul>
+
+            <h3>PageRank Centrality</h3>
+
+            <ul>
+                <li>PageRank evaluates the importance of a node in a network by considering both the quantity and quality of its incoming links. It assigns higher scores to nodes that are linked to by other nodes with high PageRank scores, recursively propagating importance throughout the network.</li>
+                <li>Nodes with high PageRank are not only well-connected but also connected to other important nodes, making them pivotal in information dissemination or authority distribution within the network. In web networks, nodes with high PageRank often correspond to web pages with high visibility or credibility.</li>
+                <li>In our case, pagerank centrality measures the all in all importance and influence and trustworthiness of a character (node).</li>
+            </ul>
+
+            <h3>Harmonic Centrality</h3>
+
+            <ul>
+                <li>Harmonic centrality measures the centrality of a node in a network by considering the sum of the reciprocals of the shortest path distances from that node to all other nodes. It emphasizes nodes that are close to many other nodes in the network, assigning higher scores to nodes that are not only well-connected but also have short paths to other nodes.</li>
+                <li>Nodes with high harmonic centrality are positioned to efficiently communicate or exchange information with other nodes, playing crucial roles in facilitating interactions or spreading influence within the network.</li>
+                <li>In the Harry Potter network, if a node has a high harmonic centrality value, it means that the given character has a very central role, information flows through him/her, others would not be able to effectively communicate without him/her.</li>
+            </ul>
+
+            <h3>Load Centrality</h3>
+
+            <ul>
+                <li>Load centrality evaluates the centrality of a node in a network based on the amount of traffic or load that passes through it. Nodes that lie on many short paths between other nodes tend to have high load centrality, indicating their importance in facilitating communication or resource exchange within the network.</li>
+                <li>Nodes with high load centrality serve as critical junctions for information or resource flow, playing key roles in maintaining network connectivity and efficiency.</li>
+                <li>In this case, if a node has a high load centrality value, it means that many others keep in touch, communicate through the given character.</li>
+            </ul>
+
+            <p>Now, we can visualize the comparison between these centralities in every combination:</p>
+            <div id="vis8"></div>
+            <p>Here we can look for correlations between the respective measures.</p>
+
+        </section>
 
         <section id="visualizations">
             <h2>Network Visualizations</h2>
