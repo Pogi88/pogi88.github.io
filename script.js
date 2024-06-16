@@ -1,52 +1,56 @@
 // Viz 1
 
 const spec = {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "Degree Distribution of the Harry Potter Network",
-    "width": 800,  
-    "height": 600, 
-    "data": {
-      "url": "https://raw.githubusercontent.com/Pogi88/pogi88.github.io/main/degree_distribution_hp.json",
-      "format": {
-        "type": "json"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Degree Distribution of the Harry Potter Network",
+  "width": 800,
+  "height": 600,
+  "data": {
+    "url": "https://raw.githubusercontent.com/Pogi88/pogi88.github.io/main/degree_distribution_hp.json",
+    "format": {
+      "type": "json"
+    }
+  },
+  "transform": [
+    {
+      "calculate": "datum.degree % 4",
+      "as": "color_group"
+    }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "degree",
+      "type": "quantitative",
+      "axis": {
+        "title": "Degree"
       }
     },
-    "transform": [
-      {
-        "calculate": "datum.degree % 4",  
-        "as": "color_group"
-      }
-    ],
-    "mark": "bar",
-    "encoding": {
-      "x": {
-        "field": "degree",
-        "type": "quantitative",
-        "axis": {
-          "title": "Degree"
-        }
-      },
-      "y": {
-        "field": "count",
-        "type": "quantitative",
-        "axis": {
-          "title": "Count"
-        }
-      },
-      "color": {
-        "field": "color_group",
-        "type": "nominal",
-        "scale": {
-          "domain": [0, 1, 2, 3],
-          "range": ["#740001", "#ae0001", "#eeba30", "#d3a625"]  
-        },
-        "legend": null
-        
+    "y": {
+      "field": "count",
+      "type": "quantitative",
+      "axis": {
+        "title": "Count"
       }
     },
-    "title": "Degree Distribution of the Harry Potter Network"
-  }
-  
+    "color": {
+      "field": "color_group",
+      "type": "nominal",
+      "scale": {
+        "domain": [0, 1, 2, 3],
+        "range": ["#740001", "#ae0001", "#eeba30", "#d3a625"]
+      },
+      "legend": null
+    },
+    "tooltip": [
+      {"field": "degree", "type": "quantitative", "title": "Degree"},
+      {"field": "count", "type": "quantitative", "title": "Count"},
+      {"field": "color_group", "type": "nominal", "title": "Color Group"}
+    ]
+  },
+  "title": "Degree Distribution of the Harry Potter Network"
+}
+
   vegaEmbed('#vis', spec).then(result => {
     console.log(result);
   }).catch(console.error);
@@ -57,8 +61,8 @@ const spec = {
   const spec2 = {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "Line Plot of Degree Distribution",
-    "width": 800,  
-    "height": 600, 
+    "width": 800,
+    "height": 600,
     "data": {
       "url": "https://raw.githubusercontent.com/Pogi88/pogi88.github.io/main/degree_distribution_hp_2.json",
       "format": {
@@ -85,11 +89,16 @@ const spec = {
         }
       },
       "color": {
-        "value": "#740001"  
-      }
+        "value": "#740001"
+      },
+      "tooltip": [
+        {"field": "degree", "type": "quantitative", "title": "Degree k"},
+        {"field": "count", "type": "quantitative", "title": "P(k)"}
+      ]
     },
     "title": "Line Plot of Degree Distribution"
   }
+  
 
   vegaEmbed('#vis2', spec2).then(result => {
     console.log(result);
@@ -132,7 +141,11 @@ const spec = {
       },
       "color": {
         "value": "#eeba30"
-      }
+      },
+      "tooltip": [
+        {"field": "degree", "type": "quantitative", "title": "Degree k"},
+        {"field": "count", "type": "quantitative", "title": "P(k)"}
+      ]
     },
     "title": "Log-Log Plot of Degree Distribution"
   }
@@ -179,10 +192,16 @@ const spec = {
           "range": ["#1a472a", "#2a623d", "#5d5d5d", "#aaaaaa"]
         },
         "legend": null
-      }
+      },
+      "tooltip": [
+        {"field": "clustering_coefficient", "type": "quantitative", "title": "Clustering Coefficient"},
+        {"field": "frequency", "type": "quantitative", "title": "Frequency"},
+        {"field": "bin_index", "type": "nominal", "title": "Bin Index"}
+      ]
     },
     "title": "Clustering Coefficient Distribution of the Harry Potter Network"
   }
+  
 
   vegaEmbed('#vis4', spec4).then(result => {
     console.log(result);
@@ -226,10 +245,16 @@ const spec = {
           "range": ["#0e1a40", "#222f5b", "#bebebe", "#946b2d"]
         },
         "legend": null
-      }
+      },
+      "tooltip": [
+        {"field": "degree_centrality", "type": "quantitative", "title": "Degree Centrality"},
+        {"field": "frequency", "type": "quantitative", "title": "Frequency"},
+        {"field": "bin_index", "type": "nominal", "title": "Bin Index"}
+      ]
     },
     "title": "Degree Centrality Distribution of the Harry Potter Network"
   }
+  
 
   vegaEmbed('#vis5', spec5).then(result => {
     console.log(result);
@@ -273,10 +298,16 @@ const spec = {
           "range": ["#0e1a40", "#222f5b", "#bebebe", "#946b2d"]
         },
         "legend": null
-      }
+      },
+      "tooltip": [
+        {"field": "betweenness_centrality", "type": "quantitative", "title": "Betweenness Centrality"},
+        {"field": "frequency", "type": "quantitative", "title": "Frequency"},
+        {"field": "bin_index", "type": "nominal", "title": "Bin Index"}
+      ]
     },
     "title": "Betweenness Centrality Distribution of the Harry Potter Network"
   }
+  
   
 
   vegaEmbed('#vis6', spec6).then(result => {
@@ -321,7 +352,12 @@ const spec = {
           "range": ["#0e1a40", "#222f5b", "#bebebe", "#946b2d"]
         },
         "legend": null
-      }
+      },
+      "tooltip": [
+        {"field": "eigenvector_centrality", "type": "quantitative", "title": "Eigenvector Centrality"},
+        {"field": "frequency", "type": "quantitative", "title": "Frequency"},
+        {"field": "bin_index", "type": "nominal", "title": "Bin Index"}
+      ]
     },
     "title": "Eigenvector Centrality Distribution of the Harry Potter Network"
   }
@@ -366,7 +402,11 @@ const spec = {
             "domain": ["degree", "between", "closeness", "eigenvector", "pagerank", "harmonic", "load"],
             "range": ["#740001", "#eeba30", "#1a472a", "#5d5d5d", "#0e1a40", "#946b2d", "#aaaaaa"]
           }
-        }
+        },
+        "tooltip": [
+          {"field": {"repeat": "column"}, "type": "quantitative", "title": {"repeat": "column"}},
+          {"field": {"repeat": "row"}, "type": "quantitative", "title": {"repeat": "row"}}
+        ]
       }
     },
     "resolve": {
@@ -375,8 +415,6 @@ const spec = {
       }
     }
   }
-  
-  
   
 
   vegaEmbed('#vis8', spec8).then(result => {
@@ -407,8 +445,6 @@ const spec = {
         ]
       }
     }
-    
-    
     
   
     vegaEmbed('#vis9', spec9).then(result => {
